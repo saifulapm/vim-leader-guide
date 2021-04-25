@@ -10,7 +10,8 @@ syn region LeaderGuideBrackets start="\(^\|\s\+\)\[" end="\]\s\+"
       \ contains=LeaderGuideKeys keepend
 
 if g:leaderGuide_display_plus_menus == 1
-  syn match LeaderGuideMenu / +[^\[^\]]\+/ contained
+  syn region LeaderGuideMenu start="+" end="$"
+        \ contained 
 
   syn region LeaderGuideDesc start="^" end="$"
         \ contains=LeaderGuideBrackets, LeaderGuideMenu keepend
@@ -24,4 +25,4 @@ endif
 hi def link LeaderGuideDesc Identifier
 hi def link LeaderGuideKeys Type
 hi def link LeaderGuideBrackets Delimiter
-hi def link LeaderGuideFloating Normal
+hi def link LeaderGuideFloating NormalFloat
