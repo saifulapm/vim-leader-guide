@@ -12,6 +12,6 @@ syn region LeaderGuideDesc start="^" end="$"
             \ contains=LeaderGuideBrackets,LeaderGuideGroupName
 
 hi def link LeaderGuideDesc Identifier
-hi def link LeaderGuideKeys Type
-hi def link LeaderGuideBrackets Delimiter
+hi def link LeaderGuideKeys Boolean
+hi def link LeaderGuideBrackets Keyword
 hi def link LeaderGuideGroupName Title
