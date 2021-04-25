@@ -11,7 +11,7 @@ syn region LeaderGuideBrackets start="\(^\|\s\+\)\[" end="\]\s\+"
 
 if g:leaderGuide_display_plus_menus == 1
   syn region LeaderGuideMenu start="+" end="$"
-        \ contained 
+        \ contains=LeaderGuideBrackets keepend
 
   syn region LeaderGuideDesc start="^" end="$"
         \ contains=LeaderGuideBrackets, LeaderGuideMenu keepend
